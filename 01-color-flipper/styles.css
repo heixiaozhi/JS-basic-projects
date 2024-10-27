@@ -44,6 +44,10 @@ h2 > span {
   color: deepskyblue;
 }
 
+h4 {
+  color: deepskyblue;
+}
+
 /*
 ===============
 Nav
@@ -55,6 +59,7 @@ Nav
 
 .header-nav {
   width: 90vw;
+  /*max-width 与 min-width 当width的大小不满足时应用*/
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -62,11 +67,6 @@ Nav
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.header-nav > div {
-  font-weight: bold;
-  color: deepskyblue;
 }
 
 .header-nav > ul {
