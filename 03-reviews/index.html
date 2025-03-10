@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-reviews</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="root">
+      <section class="review-card">
+        <div class="review-card__head">
+          <h1 class="review-card__head-title">Our Reviews</h1>
+          <div class="review-card__head-line"></div>
+        </div>
+        <div class="review-card__body">
+          <div class="review-card__body-img">
+            <img src="./img/person-1.jpeg" alt="person" />
+          </div>
+
+          <p class="review-card__body-name">Susan Smith</p>
+          <p class="review-card__body-job">web developer</p>
+          <p class="review-card__body-desc">
+            I'm baby meggings twee health goth +1. Bicycle rights tumeric
+            chartreuse before they sold out chambray pop-up. Shaman humblebrag
+            pickled coloring book salvia hoodie, cold-pressed four dollar toast
+            everyday carry
+          </p>
+          <div class="review-card__body-btns">
+            <button data-id="left" class="review-card__body-btn"><</button>
+            <button data-id="right" class="review-card__body-btn">></button>
+          </div>
+          <button class="review-card__body-btn--random">Surprise Me</button>
+        </div>
+      </section>
+    </main>
+    <!-- javascript -->
+    <script type="module" src="./js/data.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

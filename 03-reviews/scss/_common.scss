@@ -1,0 +1,34 @@
+@use 'variables';
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%border-shadow {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px 0 rgba(variables.$black-color, 0.1);
+}
+
+@mixin btn($size: 16px, $theme: variables.$primary-color) {
+  color: $theme;
+  font-size: $size;
+  cursor: pointer;
+}
+
+@mixin insert-content($content, $left, $right, $width, $height, $z-index) {
+  content: $content;
+  position: absolute;
+  left: $left;
+  top: $right;
+  @extend %flex-center;
+
+  font-size: 2rem;
+  color: variables.$white-color;
+  width: $width;
+  height: $height;
+  background: variables.$primary-color;
+  border-radius: 50%;
+  z-index: $z-index;
+}

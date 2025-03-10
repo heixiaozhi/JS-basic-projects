@@ -1,0 +1,106 @@
+@use 'reset';
+@use 'variables';
+@use 'common';
+
+.root {
+  min-height: 100vh;
+  @extend %flex-center;
+  background: variables.$grey-color-2;
+}
+
+.review-card {
+  width: 80vw;
+  @extend %flex-center;
+  flex-direction: column;
+
+  &__head {
+    @extend %flex-center;
+    flex-direction: column;
+    margin-bottom: 2.4rem;
+
+    &-title {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &-line {
+      width: 4rem;
+      border: 2px solid variables.$primary-color;
+    }
+  }
+
+  &__body {
+    max-width: 64rem;
+    height: auto;
+    padding: 2.4rem;
+    @extend %flex-center;
+    flex-direction: column;
+    @extend %border-shadow;
+    background-color: #fff;
+
+    &-img {
+      width: 15rem;
+      height: 15rem;
+      position: relative;
+
+      img {
+        height: inherit;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &-img::before {
+      @include common.insert-content('Me', -1rem, 2rem, 5rem, 5rem, 3);
+    }
+
+    &-img::after {
+      @include common.insert-content('', 1rem, -1rem, 15rem, 15rem, 1);
+    }
+
+    &-name {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    &-job {
+      margin-top: 0.6rem;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: variables.$primary-color;
+    }
+
+    &-desc {
+      margin-top: 1.6rem;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      text-align: center;
+      color: variables.$grey-color;
+      margin-bottom: 1.4rem;
+    }
+
+    &-btn {
+      @include common.btn($size: 24px);
+      margin-bottom: 1rem;
+    }
+
+    &-btn:first-child {
+      margin-right: 1.6rem;
+    }
+
+    &-btn--random {
+      padding: 0.6rem 1.2rem;
+      @include common.btn($size: 14px);
+      background-color: variables.$primary-color-2;
+      border: 2px solid variables.$primary-color;
+    }
+
+    &-btn--random:hover {
+      color: variables.$white-color;
+      background-color: variables.$primary-color;
+    }
+  }
+}
